@@ -1,0 +1,25 @@
+<nav className="relative container mx-auto p-6">
+        {/* flex container */}
+        <div className="flex items-center justify-between">
+          {/* LOGO */}
+          <div className="pt-2">
+            <img src="Logo.svg" alt="24HLogo"></img>
+          </div>
+
+          {/* MENU ITEMS */}
+          <div className="hidden md:flex space-x-6">
+            <a href="#" className="text-white hover:text-grey pt-2 font-lexend">
+              Home
+            </a>
+            <a href="#" className="text-white hover:text-grey pt-2 font-lexend">
+              About
+            </a>
+            <a
+              href="#"
+              className="text-white bg-orange px-6 py-2 hover:text-grey font-lexend"
+            >
+              Join the Wake
+            </a>
+          </div>
+        </div>
+      </nav>

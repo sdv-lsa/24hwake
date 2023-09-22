@@ -1,0 +1,32 @@
+.progress-bar {
+  background-color: #ede7e7;
+  
+  /* transform: translateY(-50%); */
+  
+  margin-left: 3rem;
+  margin-right: 3rem;
+  width: 0.2rem;
+  height: 100%;
+  
+  transform-origin: top;
+  }
+
+  /* .container{
+    display: flex;
+    flex-direction: row;
+    height: 20rem;
+  } */
+
+  /* .left-col
+  {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  } */
+
+  /* .right-col
+  {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  } */

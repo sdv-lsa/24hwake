@@ -1,0 +1,154 @@
+
+/*   JSX */
+import React, { useState, useEffect, useRef } from 'react';
+import './VerticalTimeline.css'; // Create this CSS file for styling
+
+const VerticalTimeline = () => {
+  return (
+    <section className='timeline'>
+      <ul>
+        <li>
+          <div>
+            <h3>2000</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod culpa ad ipsa similique explicabo totam nam vero at optio! Unde laboriosam animi perspiciatis perferendis facilis delectus nisi fuga. Tempora, blanditiis.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h3>2000</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod culpa ad ipsa similique explicabo totam nam vero at optio! Unde laboriosam animi perspiciatis perferendis facilis delectus nisi fuga. Tempora, blanditiis.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <div className='izquierda'>2000</div>
+            <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod culpa ad ipsa similique explicabo totam nam vero at optio! Unde laboriosam animi perspiciatis perferendis facilis delectus nisi fuga. Tempora, blanditiis.</div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+  )
+
+};
+
+export default VerticalTimeline;
+
+
+------------/* CSS */
+
+/* VerticalTimeline.css */
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+h1{
+    text-align: center;
+}
+
+.timeline{
+    background-color: gray;
+    border: 2px solid blue;
+    box-shadow: 0 25px 45px black;
+    backdrop-filter: blur(20px);
+    max-width: 1000px;
+    border-radius:10px;
+    position: relative;
+}
+
+@keyframes zoomInOut {
+    0%,
+    100% {
+        transform: scale(0.5);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+}
+
+.timeline ul li{
+    list-style-type: none;
+    position: relative;
+    width: 6px;
+    margin: 0 auto;
+    background-color: black;
+    border: 2px solid black;
+    backdrop-filter: blur(20px);
+
+}
+
+.timeline ul li::after{
+    content: '';
+    position: absolute;
+    left:50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    z-index: 1;
+
+}
+
+.timeline ul li div{
+    position: relative;
+    bottom:0;
+    width: 400px;
+    padding: 0;
+    padding-left: 100px;
+    /* background-color: gray; */
+    z-index: 0;
+    /* box-shadow: 0px 0px 0px 6px black;
+    backdrop-filter: blur(5px);
+    border-radius: 10px; */
+    color: black;
+    margin: 1rem 0;
+}
+
+/*  does nothing */
+.timeline ul li div::before{
+
+    content: '';
+    position: absolute;
+    bottom: 7px;
+    width:0;
+    height:0;
+    border-style: solid;
+
+}
+/* .timeline ul li:nth-child(odd) div{
+    left:45px;
+}
+.timeline ul li:nth-child(odd) div{
+    left:-450px;
+} */
+
+.izquierda{
+    left: -500px;
+    background-color: aquamarine;
+}
+
+/* .timeline ul li:nth-child(odd) div::before{
+    left:-15px;
+    border-width: 8px;
+    border-color: blue black transparent transparent;
+}
+
+.timeline ul li:nth-child(even) div{
+    left:-400px;
+}
+
+
+.timeline ul li:nth-child(even) div::before{
+    right:-15px;
+    border-width: 8px;
+    border-color: blue black transparent transparent;
+} */
